@@ -23,5 +23,6 @@ Template files will be copied to that location and you will be `cd`ed into that 
 1. Go. A bare minimum Golang project.
 2. BLGG. A graphics animation creation project using https://github.com/bit101/blgg
 3. Node. A bare bones node js project.
+4. Web. A bare bones html/js project.
 
 Templates are hard coded in the `autoload` dir of the plugin for now and are very custom. Long range, they could move into a configurable location and be even more teplatizable.

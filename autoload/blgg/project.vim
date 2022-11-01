@@ -15,5 +15,6 @@ function! blgg#project#Make()
   execute "cd " . l:projectPath
   call system("go mod init " . l:moduleName)
   call system("go get github.com/bit101/blgg")
+  execute "edit main.go"
   echo "\nProject created!"
 endfunction

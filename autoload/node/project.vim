@@ -10,5 +10,6 @@ function! node#project#Make()
 
   execute "cd " . l:projectPath
   call system("npm init -y > /dev/null")
+  execute "edit index.js"
   echo "\nProject created!"
 endfunction

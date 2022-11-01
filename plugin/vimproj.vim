@@ -7,9 +7,10 @@ let g:vimproj_go_module_prefix = "github.com/bit101/"
 
 function s:VpMake()
   let choices = []
-  call add(choices, "&1 Go")
-  call add(choices, "&2 BLGG")
-  call add(choices, "&3 Node")
+  call add(choices, "&Go")
+  call add(choices, "&BLGG")
+  call add(choices, "&Node")
+  call add(choices, "&Web")
   call add(choices, "&Cancel")
   let choice = confirm("Project type: ", join(choices, "\n"), len(choices))
   if choice == 1
@@ -18,6 +19,8 @@ function s:VpMake()
     call blgg#project#Make()
   elseif choice == 3 
     call node#project#Make()
+  elseif choice == 4 
+    call web#project#Make()
   endif
 endfunction
 
